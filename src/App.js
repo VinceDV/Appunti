@@ -1,11 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
+import Header from "./components/Header"
+import ClassComponent from './components/ClassComponent';
+import Benvenuto from './components/Benvenuto';
 
-function App() {
+// in jsx gli attributi multi-parola hanno il camelcase
+// invece di class si usa "className"
+
+const App = function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        <Header></Header>
+        <ClassComponent></ClassComponent>
+        <Benvenuto printedName="Emanuele" colorOfTheText="red"/>
+        <Benvenuto printedName="Giorgia" colorOfTheText="blue"/>
+        <Benvenuto printedName="Antonio" colorOfTheText="green"/>
+        <img src="https://placekitten.com/800" className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
